@@ -1,15 +1,18 @@
 defmodule Athena.Query.StartExecution do
 
   def start(query) do
-    response = %{ClientRequestToken: Ecto.UUID.generate,
+    %{ClientRequestToken: Ecto.UUID.generate,
       QueryString: query,
       WorkGroup: "abp_application"
     }
     |> Poison.encode!()
     |> Athena.RequestInterface.request("AmazonAthena.StartQueryExecution")
     |> sanitize_response
+  end
 
-    Process.sleep(2000)
+  def start_and_sleep(query, sleep) do
+    response = query |> start
+    Process.sleep(sleep)
     response
   end
 

@@ -9,7 +9,7 @@ defmodule Abp.Application do
     GROUP BY  ("lineItem/UsageStartDate", "lineItem/productcode")
     ORDER BY  cost_amount;
     """
-    |> Athena.Query.StartExecution.start
+    |> Athena.Query.StartExecution.start_and_sleep(2000)
     |> Athena.Query.GetExecutionResponse.fetch
   end
 
