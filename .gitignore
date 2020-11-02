@@ -22,9 +22,9 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 aws_billing_optimizer_v2-*.tar
 
-# IDE files
+# Manual includes
 .idea
-
 abp.iml
 .DS_Store
-
+mix.lock
+/config/dev.exs

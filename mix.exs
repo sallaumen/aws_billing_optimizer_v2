@@ -23,13 +23,14 @@ defmodule ABP.MixProject do
     [
       {:ex_aws, "~> 2.1"},
       {:ex_aws_s3, "~> 2.0"},
+      {:poison, "~> 3.1"},
       {:hackney, "~> 1.9"},
       {:sweet_xml, "~> 0.6"},
-      {:absinthe, "~> 1.5.0"},
       {:jason, "~> 1.1"},
       {:phoenix, "~> 1.5.4"},
       {:phoenix_live_dashboard, "~> 0.2"},
       {:faker, "~> 0.15", only: :test}
+      # {:absinthe, "~> 1.5.0"},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
