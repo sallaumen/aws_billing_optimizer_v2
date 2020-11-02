@@ -5,6 +5,6 @@ config :ex_aws,
   secret_access_key: "YOUR_PASS_HERE",
   debug_requests: false
 
-config :aws_athena,
+config :abp, :aws_athena,
    athena_url: "ATHENA_URL",
    athena_region: "ATHENA_REGION"

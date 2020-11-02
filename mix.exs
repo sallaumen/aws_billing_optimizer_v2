@@ -18,17 +18,17 @@ defmodule ABP.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:ex_aws, "~> 2.1"},
       {:ex_aws_s3, "~> 2.0"},
       {:poison, "~> 3.1"},
+      {:httpoison, "~> 1.7"},
       {:hackney, "~> 1.9"},
       {:sweet_xml, "~> 0.6"},
-      {:jason, "~> 1.1"},
       {:phoenix, "~> 1.5.4"},
       {:phoenix_live_dashboard, "~> 0.2"},
+      {:ecto, "~> 3.5"},
       {:faker, "~> 0.15", only: :test}
       # {:absinthe, "~> 1.5.0"},
       # {:dep_from_hexpm, "~> 0.3.0"},
