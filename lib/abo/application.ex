@@ -1,4 +1,4 @@
-defmodule Abp.Application do
+defmodule Abo.Application do
 
   def basic_app_query_test do
     ~s"""

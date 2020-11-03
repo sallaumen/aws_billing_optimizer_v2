@@ -24,7 +24,7 @@ aws_billing_optimizer_v2-*.tar
 
 # Manual includes
 .idea
-abp.iml
+abo.iml
 .DS_Store
 mix.lock
 /config/dev.exs

@@ -7,12 +7,12 @@ use Mix.Config
 config :phoenix, :json_library, Poison
 
 
-#config :abp, [
+#config :abo, [
 #  scheduler_interval_milli: 30_000,
 #  sql_provider: &Ecto.Adapters.SQL.query/4,
 #]
 
-#config :abp, ABP.Travis, [
+#config :abo, Travis, [
 #  token: System.get_env("TRAVIS_API_TOKEN"),
 #]
 

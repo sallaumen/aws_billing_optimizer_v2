@@ -1,9 +1,9 @@
-defmodule ABP.MixProject do
+defmodule Abo.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :abp,
+      app: :abo,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,

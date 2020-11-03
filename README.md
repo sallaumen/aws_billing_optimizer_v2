@@ -1,4 +1,4 @@
-# AWSBillingOptimizer (ABP)
+# AWSBillingOptimizer (ABO)
 *Author: Lucas Campos Tavano*
 
 Final paper of the Computer Engineering course at the Federal Technological University of Paraná (UTFPR)
