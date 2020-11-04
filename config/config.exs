@@ -1,19 +1,31 @@
+# This file is responsible for configuring your application
+# and its dependencies with the aid of the Mix.Config module.
+#
+# This configuration file is loaded before any dependency and
+# is restricted to this project.
+
+# General application configuration
 use Mix.Config
 
-#config :ex_aws,
-#       access_key_id: [{:system, "AWS_ACCESS_KEY_ID"}, :instance_role],
-#       secret_access_key: [{:system, "AWS_SECRET_ACCESS_KEY"}, :instance_role]
+config :abo,
+  ecto_repos: [Abo.Repo]
 
-config :phoenix, :json_library, Poison
+# Configures the endpoint
+config :abo, AboWeb.Endpoint,
+  url: [host: "localhost"],
+  secret_key_base: "bwJycE2O3icW8mKJAfL5kADNOTXrbOzQk9mYAGhppNxWscvs5EH2TpeOD0Dm+sFn",
+  render_errors: [view: AboWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Abo.PubSub,
+  live_view: [signing_salt: "PorglarM"]
 
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n",
+  metadata: [:request_id]
 
-#config :abo, [
-#  scheduler_interval_milli: 30_000,
-#  sql_provider: &Ecto.Adapters.SQL.query/4,
-#]
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
 
-#config :abo, Travis, [
-#  token: System.get_env("TRAVIS_API_TOKEN"),
-#]
-
-import_config "#{Mix.env}.exs"
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env()}.exs"

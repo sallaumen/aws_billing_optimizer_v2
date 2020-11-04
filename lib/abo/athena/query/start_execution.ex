@@ -5,7 +5,7 @@ defmodule Athena.Query.StartExecution do
       QueryString: query,
       WorkGroup: "abp_application" #TODO Fix to abo
     }
-    |> Poison.encode!()
+    |> Jason.encode!()
     |> Athena.RequestInterface.request("AmazonAthena.StartQueryExecution")
     |> sanitize_response
   end
@@ -17,13 +17,11 @@ defmodule Athena.Query.StartExecution do
   end
 
   defp sanitize_response(
-         {:ok,
            %HTTPoison.Response{
              body: body, headers: _, request: _, request_url: _, status_code: _
            }
-         }
        ) do
-    {:ok, %{"QueryExecutionId" => query_execution_id}} = body |> Poison.decode
+    %{"QueryExecutionId" => query_execution_id} = body |> Jason.decode!
     query_execution_id
   end
   defp sanitize_response(_) do
