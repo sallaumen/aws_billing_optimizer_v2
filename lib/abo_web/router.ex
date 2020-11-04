@@ -17,6 +17,9 @@ defmodule AboWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/executeTestQueryAndGetResponse", TestQueryController, :execute_test_query_and_get_response
+    get "/executeTestQuery", TestQueryController, :execute_test_query
+    get "/getTestQueryResponse", TestQueryController, :get_test_query_response
   end
 
   # Other scopes may use custom stacks.

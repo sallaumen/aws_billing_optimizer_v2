@@ -1,7 +1,8 @@
 defmodule Athena.Query.StartExecution do
 
   def start(query) do
-    %{ClientRequestToken: Ecto.UUID.generate,
+    %{
+      ClientRequestToken: Ecto.UUID.generate,
       QueryString: query,
       WorkGroup: "abp_application" #TODO Fix to abo
     }
