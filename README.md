@@ -1,3 +1,5 @@
+# This project was not finishied and may never be. :( 
+
 # AWSBillingOptimizer (ABO)
 *Author: Lucas Campos Tavano*
 
